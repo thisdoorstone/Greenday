@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="문석 포트폴리오">
+    <meta property="og:type" content="개인포트폴리오 : WEB">
+    <meta property="og:description" content="개인포트폴리오 제작 확인용">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="img/">
+    <title>Greenday</title>
+    <link rel="shortcut ico" href="img/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/setting.css">
+    
+    <style>
+        @font-face {
+            font-family: 'LINESeedKR-Bd';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'OTWelcomeRA';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/OTWelcomeRA.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        /*
+            W=1200px - margin=72px
+            W=768px - margin=32px
+            W=390px - margin=20px
+
+            gutter : 36px
+        
+            color: #3AB54A
+
+            invert(70%); 색 반전 효과.
+        */
+
+        /*curtain*/
+        .curtain_left{width: 100%; height: 100vh; background: #fff; position: absolute; left: 0; animation: curtain 1s forwards ease-in-out 0.5s; z-index: 1000;}
+        .curtain_right{width: 100%; height: 100vh; background: #fff; position: absolute; right: 0; animation: curtain 1s forwards ease-in-out 0.5s; z-index: 1000;} 
+
+        @keyframes curtain{
+            0%{}
+            100%{width: 0%; opacity: 0;}
+        }
+        /*curtain end*/
+
+        /*page1*/
+        .page1{background: #fff; overflow: hidden; position: relative; height: 100vh;}
+        .page1_bg{width: 100%; height: 100%;}
+        .page1_bg>div{width: 100%; height: 100%;}
+        .page1_width{padding: 0 72px; max-width: 1440px; margin: 0 auto;}
+        .bg_opacity{position: absolute; top: 0; left: 0; opacity: 0.25; width: 100%; height: 100%; background: #000;}
+        .title{position: absolute; top: 50%; transform: translateY(-50%);}
+        .title h1{font-size: 46px; font-weight: bold; margin-bottom: 27px; color: #fff; animation: up_opacity 0.5s ease-in-out 1.5s backwards;}
+        .title p{font-size: 18px; color: rgba(255, 255, 255, 0.8); animation: up_opacity 0.5s ease-in-out 1.8s backwards; margin: 0;}
+        @keyframes up_opacity{
+            0%{opacity: 0; transform: translateY(-20%);}
+            100%{opacity: 1; transform: translateY(0%);}
+        }
+
+        .scroll_guide{width: 60px; height: 80px; /*background: red;*/ position: absolute; bottom: 36px; right: 50%; transform: translateX(-50%); text-align: center;}
+        .sg-1{width: 8px; height: 8px; background: rgba(255, 255, 255); opacity: 0; border-radius: 50%; margin: 0 26px; margin-bottom: 12px; animation: sg_scale 1s infinite;}
+        .sg-2{width: 8px; height: 8px; background: rgba(255, 255, 255); opacity: 0; border-radius: 50%; margin: 0 26px; margin-bottom: 12px; animation: sg_scale 1s infinite 0.15s;}
+        .sg-3{width: 8px; height: 8px; background: rgba(255, 255, 255); opacity: 0; border-radius: 50%; margin: 0 26px; margin-bottom: 12px; animation: sg_scale 1s infinite 0.3s;}
+        .sg-4{width: 60px; height: 20px; line-height: 20px; color: rgba(255, 255, 255, 0.8); text-transform: uppercase; font-size: 14px;}
+        @keyframes sg_scale{
+            100%{opacity: 0.8;}
+        }
+        /*page1 end*/
+
+        /*page2*/
+        .page2_bg{width: 100%; overflow: hidden;}
+        .page2{position: relative; max-width: 1440px; margin: 0 auto; padding: 120px 72px;}
+        .page2_box{width: 100%;}
+        .page2_txt_box{display: block;}
+        .page2_txt_box h1{font-size: 40px; font-weight: bold; margin: 0;}
+        .page2_txt_box p{word-break: break-all; width: 100%; font-size: 18px; margin: 27px 0 54px 0; color: #666;}
+        .page2_txt_box p span{display: block;}
+
+        .page2_img_box{width: 100vw; height: 436px; /*background: lightcyan;*/ display: block; position: relative;}
+        .page2_img_slide1{height: 200px; width: 200%; position: absolute; left: -10%; top: 0; display: inline-block; overflow: hidden; /*background: lavenderblush;*/ animation: left-slide 30s infinite linear;}
+        .page2_img_slide2{height: 200px; width: 200%; position: absolute; left: -110%; bottom: 0; display: inline-block; overflow: hidden; /*background: lavender;*/ animation: right-slide 30s infinite linear;}
+        .page2_img{width: 297px; height: 200px; background: #999; float: left; margin: 0 18px; overflow: hidden;}
+        @keyframes left-slide{
+            100%{transform: translate(-50%);}
+        }
+        @keyframes right-slide{
+            100%{transform: translate(50%);}
+        }
+
+        .page2_slide_img1{background: url(img/main-slide1.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img2{background: url(img/main-slide2.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img3{background: url(img/main-slide3.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img4{background: url(img/main-slide4.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img5{background: url(img/main-slide5.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img2-1{background: url(img/main-slide2-1.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img2-2{background: url(img/main-slide2-2.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img2-3{background: url(img/main-slide2-3.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img2-4{background: url(img/main-slide2-4.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        .page2_slide_img2-5{background: url(img/main-slide2-5.jpg); background-size: cover; background-position: center; width: 100%; height: 100%;}
+        /*page2 end*/
+
+        /*page3*/
+        .page3_bg{/*background: #f8f8f8;*/overflow: hidden; width: 100%;}
+        .page3{overflow: hidden; max-width: 1440px; margin: 0 auto; padding: 120px 72px;}
+        .page3_box{width: 100%;}
+        .page3_txt_box>h1{font-size: 40px; margin-bottom: 54px; font-weight: bold;}
+        .page3_contents{width: 100%; overflow: hidden;}
+        
+        .page3_content{float: left; overflow: hidden; width: calc((100% - 72px)/3); height: 640px;}
+        .page3_content2{margin-left: 36px;}
+        .page3_content3{float: right;}
+        .page3_content>div{float: left; margin-bottom: 18px; position: relative; text-align: center;}  /*이미지만 효과*/
+        .page3_content>div:last-child{margin-bottom: 0; margin-top: 18px;}
+
+        .page3_img_info{font-size: 16px; width: 100%; transition: 0.5s; margin-top: 36px; color: #fff; display: none; word-break: keep-all;}
+
+        .page3_txt{word-break: keep-all; transition: 0.5s; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; overflow: hidden;}
+        .page3_txt>h1{font-size: 46px; font-weight: bold; margin-bottom: 18px; color: #fff;}
+        .page3_txt>h1>span{font-size: 40px; font-weight: 300; color: #fff;}
+        .page3_txt>h4{font-size: 18px; color: #fff; margin: 0;}
+        .page3_con{overflow: hidden; transition: 0.5s;}
+        .page3_con:hover .page3_img{transform: scale(1.1); transition: all 0.5s;}
+
+        .page3_con1{width: 100%; height: 352px; background: #333;}
+        .page3_con2{width: 100%; height: 352px; background: #333;}
+        .page3_con3{width: 100%; height: 290px; background: #333;}
+        .page3_con4{width: 100%; height: 252px; background: #333;}
+        .page3_con5{width: 100%; height: 252px; background: #333;}
+        .page3_con6{width: 100%; height: 314px; background: #333;}
+
+        .page3_con1_img{width: 100%; height: 100%; background: #fff url(img/main_con1-3.jpg); background-size: cover;}
+        .page3_con2_img{width: 100%; height: 100%; background: #fff url(img/main_con2.jpg); background-size: cover;}
+        .page3_con3_img{width: 100%; height: 100%; background: #fff url(img/main_con3.jpg); background-size: cover; background-position: center;}
+        .page3_con4_img{width: 100%; height: 100%; background: #fff url(img/main_con4-2.jpg); background-size: cover;}
+        .page3_con5_img{width: 100%; height: 100%; background: #fff url(img/main_con5.jpg); background-size: cover; background-position: center;}
+        .page3_con6_img{width: 100%; height: 100%; background: #fff url(img/main_con6.jpg); background-size: cover; background-position: center;}
+        .page3_img{transition: all 0.3s ease-in; opacity: 0.6;}
+        .page3_img.on{opacity: 0.2;}
+
+        .page3_info{font-size: 16px; color: #bbb; margin-top: 27px; float: left; width: 100%;}
+        .page3_info p{float: right;}
+        /*page3 end*/
+
+        /*page4*/
+        .page4{width: 100%; overflow: hidden; /*background: lavender;*/}
+        .page4_width{max-width: 1440px;  /*background: red;*/ margin: 0 auto; padding: 120px 72px; position: relative;}
+
+        .page4-main{width: 100%; /*background: red;*/ margin-bottom: 120px;}
+        .page4-main>h1{margin-bottom: 0; font-size: 40px; font-weight: bold;}
+
+        .page4-con{/*background: lavender;*/ margin-bottom: 72px;}
+        .page4-con:last-child{margin-bottom: 0;}
+        .pg4-con{width: 100%; height: 300px; position: relative;}
+        .pg4-con-txt{word-break: keep-all; width: calc(50% - 18px); /*background: palegoldenrod;*/ position: absolute; top: 50%; transform: translateY(-50%);}
+        .pg4-img{height: 300px; width: 100%; /*background: orange;*/ position: absolute;}
+        .pg4-img1{background: url(img/hwal.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+        .pg4-img2{background: url(img/hong.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+        .pg4-img3{background: url(img/gaebal.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+        .pg4-img4{background: url(img/jung.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+        .pg4-img5{background: url(img/dong2.jpg); background-position: center; background-repeat: no-repeat; background-size: cover;}
+        
+        .page4-con:nth-child(2n+1) .pg4-img{left: calc(50% + 36px);}
+        
+        .page4-con:nth-child(2n) .pg4-con-txt{right: 0; /*background: red;*/}
+        .page4-con:nth-child(2n) .pg4-img{right: calc(50% + 36px);}
+
+        .pg4-con-txt>span{font-size: 18px; padding-left: 1px; color: #fff; text-shadow: 1px 1px 0px green,1px 0px 0px green,0px 1px 0px green,-1px 0px 0px green,-1px -1px 0px green,0px -1px 0px green,1px -1px 0px green,-1px 1px 0px green;}
+        .pg4-con-txt>h1{font-size: 36px; font-weight: bold; margin: 18px 0 36px;}
+        .pg4-con-txt>p{font-size: 18px; color: #666;}
+        /*page4 end*/
+        
+        /*tablet*/
+        @media all and (max-width:768px){
+            /*setting*/
+            p{line-height: normal;}
+            #nav{max-width: 768px; /*background: none; backdrop-filter: none;*/}
+            #nav:hover{background: rgba(255, 255, 255, 0.3);}
+            .nav_width{max-width: 768px; padding: 0 32px;}
+            .row{display: none;}
+            .curtain_left, .curtain_right{display: none;}
+
+            .up-btn{width: 54px; height: 54px; bottom: 36px; right: 32px;}
+            .up-btn img{width: 30px; height: 30px;}
+
+            .menu-opacity{transition: all 0.3s ease-in; position: fixed; top: 0; left: 0; width: 100vw; height: 100%; background: rgba(0,0,0,0.5); z-index: 40; display: none;}
+
+            .search_bar{width: 600px; height: 80px; border: none; border-bottom: 3px solid #333; z-index: 20; position: absolute; top: 0; left: 0; font-size: 30px; font-weight: bold;}
+
+            .menu_list>li{position: relative; float: left; font-size: 30px; display: block; width: 150px; height: 60px; float: left; /*background: blue;*/ margin-right: 30px; font-weight: bold;}
+            /*setting end*/
+
+            .page2,.page3,.page4,#footer{max-width: 390px; padding: 80px 32px;}
+
+            /*page1*/
+            .page1{height: 600px; max-width: 768px;}
+            .page1_width{max-width: 768px; padding: 0 32px;}
+            .page1_bg{background: url(img/main.jpg); background-size: cover; background-position: center;}
+            .scroll_guide{display: none;}
+            .title h1{font-size: 40px; margin-bottom: 20px; animation: up_opacity 0.8s ease-in-out backwards;}
+            .title p{font-size: 16px; animation: up_opacity 0.8s ease-in-out 0.3s backwards;}
+            /*page1 end*/
+            
+            /*page2*/
+            .page2{max-width: 768px; margin: 0;}
+            .page2_txt_box h1{font-size: 30px; font-weight: bold; margin: 0;}
+            .page2_txt_box p{font-size: 16px; margin: 20px 0 40px 0;}
+            .page2_txt_box p span{display: inline;}
+            
+            .page2_img_box{width: 100vw; max-height: 420px; /*background: lightcyan;*/ display: block; position: relative;}
+            .page2_img_slide1{max-height: 200px; width: 200%; position: absolute; left: -10%; top: 0; display: inline-block; overflow: hidden; /*background: lavenderblush;*/ animation: left-slide 30s infinite linear;}
+            .page2_img_slide2{max-height: 200px; width: 200%; position: absolute; left: -110%; bottom: 0; display: inline-block; overflow: hidden; /*background: lavender;*/ animation: right-slide 30s infinite linear;}
+            .page2-2_con1,.page2-1_con1{height: 100%; overflow: hidden;}
+            .page2_img{max-width: 20%; height: 100%; background: #999; float: left; margin: 0 10px; overflow: hidden;}
+            /*page2 end*/
+
+            /*page3*/
+            .page3{max-width: 768px; padding: 80px 32px;}
+            .page3_txt_box>h1{font-size: 30px; margin-bottom: 40px;}
+            
+            .page3_content{float: left; overflow: hidden; width: calc((100% - 40px)/3); height: 420px;}
+            .page3_content2{margin-left: 20px;}
+            .page3_content3{float: right;}
+            .page3_content>div{float: left; margin-bottom: 10px;}
+            .page3_content>div:last-child{margin-bottom: 0; margin-top: 10px;}
+
+            .page3_img_info{font-size: 16px; margin-top: 40px; word-break: break-all;}
+
+            .page3_txt{word-break: keep-all; transition: 0.5s; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; overflow: hidden;}
+            .page3_txt>h1{font-size: 40px; font-weight: bold; margin-bottom: 20px; color: #fff;}
+            .page3_txt>h1>span{font-size: 30px; font-weight: 300; color: #fff;}
+            .page3_txt>h4{font-size: 16px; color: #fff; margin: 0;}
+
+            .page3_con1{height: 240px;}
+            .page3_con2{height: 220px;}
+            .page3_con3{height: 180px;}
+            .page3_con4{height: 160px;}
+            .page3_con5{height: 180px;}
+            .page3_con6{height: 220px;}
+
+            .page3_info{font-size: 16px; margin-top: 20px;}
+            .page3_info p{margin-bottom: 0;}
+            /*page3 end*/
+
+            /*page4*/
+            .page4{max-width: 768px; padding: 80px 32px;}
+            .page4_width{width: 100%; padding: 0;}
+
+            .page4-main{ margin-bottom: 80px;}
+            .page4-main>h1{font-size: 30px;}
+
+            .page4-con{margin-bottom: 40px;}
+            .pg4-con{width: 100%; height: 240px; position: relative;}
+            .pg4-con-txt{width: calc(50% - 10px);}
+            .pg4-img{height: 240px;}
+            
+            .page4-con:nth-child(2n+1) .pg4-img{left: calc(50% + 10px);}
+            
+            .page4-con:nth-child(2n) .pg4-con-txt{right: 0; /*background: red;*/}
+            .page4-con:nth-child(2n) .pg4-img{right: calc(50% + 10px);}
+
+            .pg4-con-txt>span{font-size: 18px;}
+            .pg4-con-txt>h1{font-size: 30px; margin: 10px 0 20px;}
+            .pg4-con-txt>p{font-size: 16px;}
+            /*page4 end*/
+
+            /*footer*/
+            #footer{max-width: 768px; margin: 0 auto; overflow: hidden; padding: 80 32px;}
+            .footer_left{width: calc(50% - 42px); position: static; float: left; transform: translate(0,0)}
+            .footer_left h1{margin-bottom: 40px; font-size: 30px; line-height: 40px;}
+            .footer_left p{margin-bottom: 20px; color: #999; font-size: 16px;}
+            .footer_left p:nth-child(4){margin-bottom: 40px;}
+            .footer_left .enquiry{margin-bottom: 40px;}
+            .footer_left .enquiry a{padding: 0 40px; height: 40px; line-height: 40px; font-size: 14px;}
+            .footer_left .enquiry a:hover{background: #666;}
+            .footer_left .footer_info{color: #eee; font-size: 12px;}
+            .footer_left .footer_info a{color: #ddd; font-size: 12px;}
+            .footer_left .footer_info a:hover{color: #999;}
+
+            .footer_right{width: calc(50% - 42px); right: 32px; position: static; float: right; transform: translate(0,0);}
+            .footer_right h1{margin-bottom: 40px; font-size: 30px; font-weight: bold;}
+            .footer_email, .footer_name, .footer_submit{font-size: 14px; margin-bottom: 20px; height: 40px;}
+            .footer_email{margin-bottom: 20px;}
+            .footer_checkbox{height: 16px; margin-bottom: 40px;}
+            .footer_checkbox p{margin-left: 30px; font-size: 12px; line-height: 16px;}
+            .email_agree{height: 16px; width: 16px; position: absolute; left: 0; top: 0; opacity: 0; z-index: 1;}
+            .ft_cb_checkbox{width: 16px; height: 16px; position: absolute; top: 0; left: 0; border: 3px solid #333; transition: all 0.5s;}
+            .email_agree:checked~.ft_cb_checkbox{background: #333; transition: all 0.5s; border: 3px solid #333;}
+            .footer_right input:last-child{margin-bottom: 0;}
+            #footer>p{text-align: center; position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); font-size: 16px; width: 100%;}
+            /*footer end*/
+        }
+        /*tablet end*/
+
+        /*mobile*/
+        @media all and (max-width:390px){
+            .row{display: none;}
+            #nav{max-width: 390px; height: 60px;}
+            .nav_width{max-width: 390px; padding: 0 20px;}
+            .logo{font-size: 20px; line-height: 60px;}
+            .donation, .search, .menu{margin-top: 20px;}
+            .donation a{font-size: 12px; width: 80px; height: 21px; line-height: 21px;}
+            .search,.search-img,.menu,.toggle_box,.toggle_button{width: 21px; height: 21px;}
+            .toggle_box span{width: 21px;}
+            .toggle_box span::before{width: 21px; top: 8.5px;}
+            .toggle_box span::after{width: 21px; top: -7.5px;}
+            .up-btn{width: 40px; height: 40px; bottom: 36px; right: 20px;}
+            .up-btn img{width: 20px; height: 20px;}
+
+            .screen_width{max-width: 390px; padding: 0 20px;}
+            .search_box{width: 100%; height: 40px;}
+            .search_bar{width: 100%; height: 40px; font-size: 20px;}
+            .search_btn{width: 20px; height: 20px;}
+            
+            .menu_width{max-width: 390px; padding: 0 20px;}
+            .menu_list_box{width: 100%; height: 40px;}
+            .menu_list{width: 100%; height: 40px; line-height: 40px;}
+            .menu_list>li{font-size: 20px; width: calc(100%/4); height: 40px; margin-right: 0px;}
+            .menu_list>li:last-child{margin-right: 0px;}
+            .menu_sebu_list{margin-top: 10px;}
+            .menu_sebu_list>li>a{font-size: 14px; width: 100%; height: 20px; line-height: 20px;}
+
+            .page2,.page3,.page4,#footer{max-width: 390px; padding: 60px 20px;}
+            
+            /*page1*/
+            .page1{max-width: 390px; height: 400px;}
+            .page1_width{max-width: 390px; padding: 0 20px;}
+            .page1_bg{width: 100%; height: 100%;}
+            .title h1{font-size: 24px; margin-bottom: 10px; animation: up_opacity 0.8s ease-in-out backwards;}
+            .title p{font-size: 14px; animation: up_opacity 0.8s ease-in-out 0.3s backwards;}
+            /*page1 end*/
+
+            /*page2*/
+            .page2_txt_box h1{font-size: 20px; font-weight: bold; margin: 0;}
+            .page2_txt_box p{font-size: 14px; margin: 10px 0 20px 0;}
+            .page2_txt_box p span{display: inline;}
+
+            .page2_img_box{width: 100vw; max-height: 256px; /*background: lightcyan;*/ display: block; position: relative;}
+            .page2_img_slide1{max-height: 120px; width: 200%; position: absolute; left: -10%; top: 0; display: inline-block; overflow: hidden; /*background: lavenderblush;*/ animation: left-slide 30s infinite linear;}
+            .page2_img_slide2{max-height: 120px; width: 200%; position: absolute; left: -110%; bottom: 0; display: inline-block; overflow: hidden; /*background: lavender;*/ animation: right-slide 30s infinite linear;}
+            .page2-2_con1,.page2-1_con1{height: 100%; overflow: hidden;}
+            .page2_img{max-width: 20%; height: 100%; background: #999; float: left; margin: 0 8px; overflow: hidden;}
+            /*page2 end*/
+
+            /*page3*/
+            .page3{max-width: 390px;}
+            .page3_txt_box>h1{font-size: 20px; margin-bottom: 20px;}
+            
+            .page3_content{float: left; overflow: hidden; /*width: calc((100% - 32px)/3);*/ width: 100%; height: 336px;}
+            .page3_content2{margin-left: 16px; margin-left: 16; display: none;}
+            .page3_content3{float: right; margin-bottom: 0; display: none;}
+            .page3_content>div{float: left; margin-bottom: 8px;}  /*이미지만 효과*/
+            .page3_content>div:last-child{margin-bottom: 0; margin-top: 8px;}
+
+            .page3_img_info{font-size: 14px; width: 100%; transition: 0.5s; margin-top: 20px; color: #fff; display: none; word-break: break-all;}
+
+            .page3_txt{word-break: keep-all; transition: 0.5s; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; overflow: hidden;}
+            .page3_txt>h1{font-size: 30px; font-weight: bold; margin-bottom: 10px; color: #fff;}
+            .page3_txt>h1>span{font-size: 20px; font-weight: 300; color: #fff;}
+            .page3_txt>h4{font-size: 14px; color: #fff; margin: 0;}
+
+            .page3_con1{height: 160px;}
+            .page3_con2{height: 160px;}
+            .page3_con3{height: 160px;}
+            .page3_con4{height: 160px;}
+            .page3_con5{height: 160px;}
+            .page3_con6{height: 160px;}
+
+            .page3_info{font-size: 12px; margin-top: 20px;}
+            /*page3 end*/
+
+            /*page4*/
+            .page4{max-width: 390px;}
+            .page4 p{margin-bottom: 0;}
+            .page4_width{width: 100%; padding: 0;}
+
+            .page4-main{margin-bottom: 40px;}
+            .page4-main>h1{font-size: 20px;}
+
+            .page4-con{margin-bottom: 40px;}
+            .pg4-con{width: 100%; height: 160px; position: relative;}
+            .pg4-con-txt{width: calc(50% - 10px);}
+            .pg4-img{height: 160px;}
+            
+            .page4-con:nth-child(2n+1) .pg4-img{left: calc(50% + 10px);}
+            
+            .page4-con:nth-child(2n) .pg4-con-txt{right: 0; /*background: red;*/}
+            .page4-con:nth-child(2n) .pg4-img{right: calc(50% + 10px);}
+
+            .pg4-con-txt>span{font-size: 14px;}
+            .pg4-con-txt>h1{font-size: 18px; margin: 5px 0 10px;}
+            .pg4-con-txt>p{font-size: 12px; word-break: break-all;}
+            /*page4 end*/
+
+            /*footer*/
+            #footer{max-width: 390px; margin: 0 auto; overflow: hidden; padding: 60px 20px;}
+            .footer_left{width: 100%; overflow: hidden; position: static; transform: translate(0,0); text-align: center; margin-top: 60px;}
+            .footer_left h1{margin-bottom: 20px; font-size: 20px; line-height: 30px;}
+            .footer_left p{margin-bottom: 10px; color: #999; font-size: 12px;}
+            .footer_left p:nth-child(4){margin-bottom: 20px;}
+            .footer_left .enquiry{margin-bottom: 20px;}
+            .footer_left .enquiry a{padding: 0 30px; height: 36px; line-height: 36px; font-size: 12px;}
+            .footer_left .enquiry a:hover{background: #666;}
+            .footer_left .footer_info{color: #eee; font-size: 12px; text-align: center;}
+            .footer_left .footer_info a{color: #ddd; font-size: 10px;}
+            .footer_left .footer_info a:hover{color: #999;}
+
+            .footer_right{width: 100%; overflow: hidden; position: static; transform: translate(0,0);}
+            .footer_right h1{margin-bottom: 20px; font-size: 20px; font-weight: bold;}
+            .footer_email, .footer_name, .footer_submit{font-size: 12px; margin-bottom: 20px; height: 36px;}
+            .footer_email{margin-bottom: 20px;}
+            .footer_checkbox{height: 16px; margin-bottom: 40px;}
+            .footer_checkbox p{margin-left: 30px; font-size: 10px; line-height: 16px;}
+            .email_agree{height: 16px; width: 16px; position: absolute; left: 0; top: 0; opacity: 0; z-index: 1;}
+            .ft_cb_checkbox{width: 16px; height: 16px; position: absolute; top: 0; left: 0; border: 3px solid #333; transition: all 0.5s;}
+            .email_agree:checked~.ft_cb_checkbox{background: #333; transition: all 0.5s; border: 3px solid #333;}
+            .footer_right input:last-child{margin-bottom: 0;}
+            #footer>p{font-size: 10px; width: 100%; bottom: 20px;}
+            /*footer end*/
+        }
+        /*mobile end*/
+    </style>
+    <script src="script/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="script/main_page4.js"></script>
+    <script src="script/nav.js"></script>
+    <script src="script/main_page3.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script/vegas.min.js"></script>
+    <script src="script/up-btn.js"></script>
+
+    <script>
+        $(function(){
+            AOS.init();
+            
+            $(".page1_bg").vegas({
+                slides: [
+                    {   video: {
+                        src: ["img/forest.mp4"],
+                        loop:true,
+                        mute:true
+                    } 
+                }
+                ]
+            });
+            
+        })
+    </script>
+</head>
+<body>
+    <!--.curtain-->
+    <div class="curtain_left"></div>
+    <div class="curtain_right"></div>
+    <!--.curtain end-->
+
+    <!--#nav-->
+    <div id="nav">
+        <div class="nav_width">
+            <p class="logo"><a href="index.html">GREENDAY</a></p>
+            <div class="menu">
+                <input class="toggle_button" type="checkbox">
+                <div class="toggle_box">
+                    <span></span>
+                </div>
+            </div>
+            <div class="search"><div class="search-img"></div></div>
+            <div class="donation"><a href="#">후원하기</a></div><!--후원 페이지 링크하기-->
+        </div>
+    </div>
+
+    <div class="menu-opacity"></div>
+
+    <div class="search_screen">
+        <div class="screen_width">
+            <div class="search_box">
+                <input type="text" class="search_bar" placeholder="검색어를 입력해주세요." onfocus="this.placeholder='넌 분리수거할 때 제일 예뻐.'" onblur="this.placeholder='검색어를 입력해주세요.'"><div class="search_btn"></div>
+            </div>
+            <!--<div class="search_close" style="font-weight: bold;">Close</div>-->
+        </div>
+    </div>
+    <div class="menu_screen">
+        <div class="menu_width">
+            <div class="menu_list_box">
+                <ul class="menu_list">
+                    <li><a href="campaign.html">참여</a>
+                        <ul class="menu_sebu_list">
+                            <li><a href="campaign.html">소개</a></li>
+                            <li><a href="campaign.html">활동</a></li>
+                            <li><a href="#">공유</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="store.html">스토어</a>
+                        <ul class="menu_sebu_list">
+                            <li><a href="store.html">구매내역</a></li>
+                            <li><a href="store.html">배송정보</a></li>
+                            <li><a href="#">환불/교환</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소식</a>
+                        <ul class="menu_sebu_list">
+                            <li><a href="#">환경뉴스</a></li>
+                            <li><a href="#">공지사항</a></li>
+                            <li><a href="#">멸종위기동물</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">소개</a>
+                        <ul class="menu_sebu_list">
+                            <li><a href="#">후원금 사용처</a></li>
+                            <li><a href="#">찾아오시는 길</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--#nav end-->
+
+    <!--<div class="row">
+        <div class="col-4">
+          <div id="list-example" class="list-group">
+            <a class="list-group-item list-group-item-action" href="#page1"></a>
+            <a class="list-group-item list-group-item-action" href="#page2"></a>
+            <a class="list-group-item list-group-item-action" href="#page3"></a>
+            <a class="list-group-item list-group-item-action" href="#page4"></a>
+            <a class="list-group-item list-group-item-action" href="#footer"></a>
+          </div>
+        </div>
+    </div>-->
+
+    <!--page1-->
+    <div class="page1" id="page1">
+        <div class="page1_bg"></div>
+
+        <div class="bg_opacity"></div>
+
+        <div class="page1_width">
+            <div class="title">
+                <h1>
+                    우리가 GREEN<br>
+                    내일을 위해 GREENDAY
+                </h1>
+                <p>
+                    환경개선, 보호  에 앞장서 많은 이들에게<br>
+                    좋은 영향력을 전파하는 단체가 되겠습니다.
+                </p>
+            </div>
+
+            <div class="scroll_guide">
+                <div class="sg-1"></div>
+                <div class="sg-2"></div>
+                <div class="sg-3"></div>
+                <span class="sg-4">scroll</span>
+            </div>
+        </div>
+    </div>
+    <!--page1 end-->
+
+    <!--page2-->
+    <div class="page2_bg">
+        <div class="page2" id="page2">  
+            <div class="page2_box">
+                <div class="page2_txt_box" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>
+                        아름다운 환경을<br>보호하고 아껴주세요.
+                    </h1>
+                    <p>
+                        우리는 자연으로부터 생활에 필요한 대부분을 취합니다. <span>하지만 빠른 속도로 환경이 악화되어 가고 있고 우리가 환경을 보호해야 합니다.</span>
+                    </p>
+                </div>
+            
+                <div class="page2_img_box" data-aos="fade-up" data-aos-duration="1000"><!--밖으로 빼고 z축 앞으로 띄우기 / 덮는 컨텐츠 width:100% 안에 컨텐츠 200% 똑같은거 두번 만들어서 애니메이션으로 가능?-->
+                    <div class="page2_img_slide1">
+                        <div class="page2-1_con1">
+                            <div class="page2_img"><div class="page2_slide_img1"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img3"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img4"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img5"></div></div>
+                        </div>
+                        <div class="page2-1_con1">
+                            <div class="page2_img"><div class="page2_slide_img1"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img3"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img4"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img5"></div></div>
+                        </div>
+                        <div class="page2-1_con1">
+                            <div class="page2_img"><div class="page2_slide_img1"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img3"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img4"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img5"></div></div>
+                        </div>
+                    </div>
+                    <div class="page2_img_slide2">
+                        <div class="page2-2_con1">
+                            <div class="page2_img"><div class="page2_slide_img2-1"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-2"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-3"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-4"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-5"></div></div>
+                        </div>
+                        <div class="page2-2_con1">
+                            <div class="page2_img"><div class="page2_slide_img2-1"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-2"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-3"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-4"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-5"></div></div>
+                        </div>
+                        <div class="page2-2_con1">
+                            <div class="page2_img"><div class="page2_slide_img2-1"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-2"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-3"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-4"></div></div>
+                            <div class="page2_img"><div class="page2_slide_img2-5"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--page2 end-->
+
+    <!--page3-->
+    <div class="page3_bg">
+        <div class="page3" id="page3">
+            <div class="page3_box">
+                <div class="page3_txt_box" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>지금 우리 지구는?</h1>
+                </div>
+                <div class="page3_contents" data-aos="fade-up" data-aos-duration="1000">
+
+                    <div class="page3_content page3_content1">
+                        <div class="page3_con1 page3_con">
+                            <div class="page3_con1_img page3_img"></div>
+                            <div class="page3_txt1 page3_txt">
+                                <h1>9.9 <span>cm</span></h1>
+                                <h4>33년간 연평균 해수면 상승률</h4>
+                                <p class="page3_img_info">
+                                    해수면 상승으로 인해 도시, 작은 섬들이 물에 잠기고
+                                    서늘한 기후에 살아야 하는 동식물이 멸종하는 상황을 초래할 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="page3_con4 page3_con">
+                            <div class="page3_con4_img page3_img"></div>
+                            <div class="page3_txt4 page3_txt">
+                                <h1>0.73 <span>°C</span></h1>
+                                <h4>연평균 기온 상승률</h4>
+                                <div class="page3_img_info">
+                                    지구의 대기 온도가 계속해서 상승하면 생태계가 붕괴되고 사막화가 악화되며 사람이 살 수 없는 기후로 바뀝니다.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page3_content page3_content2">    
+                        <div class="page3_con2 page3_con">
+                            <div class="page3_con2_img page3_img"></div>
+                            <div class="page3_txt2 page3_txt">
+                                <h1>600 <span>ha</span></h1>
+                                <h4>매년 증가하는 사막화 면적률</h4>
+                                <p class="page3_img_info">
+                                    사막화로 숲이 점차 사라지면 야생동물들이 서식지를 잃고 물 부족 현상으로 인해 작물 재배가 어려워 식량난에 빠질 수 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="page3_con5 page3_con">
+                            <div class="page3_con5_img page3_img"></div>
+                            <div class="page3_txt5 page3_txt">
+                                <h1>69 <span>%</span></h1>
+                                <h4>50년간 생물 개체수 감소율</h4>
+                                <p class="page3_img_info">
+                                    인류는 생존에 필요한 모든 것을 식물, 동물, 미생물 등 생물 자원에 의존합니다 하지만
+                                    환경오염, 지구온난화, 무분별한 사냥으로 인해 많은 생물이 사라지고 있습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page3_content page3_content3">                
+                        <div class="page3_con3 page3_con">
+                            <div class="page3_con3_img page3_img"></div>
+                            <div class="page3_txt3 page3_txt">
+                                <h1>406억 <span>t</span></h1>
+                                <h4>이산화탄소 배출량</h4>
+                                <p class="page3_img_info">
+                                    온실가스 배출량이 늘어남에 따라 지구의 기온이 상승하고 세계 각지에서 이상기후들이 발생하고 있으며 우리나라 또한 매년 폭염으로 인한 피해가 늘어나고 있습니다.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="page3_con6 page3_con">
+                            <div class="page3_con6_img page3_img"></div>
+                            <div class="page3_txt6 page3_txt">
+                                <h1>27.8 <span>%</span></h1>
+                                <h4>꿀벌 개체수 감소율</h4>
+                                <p class="page3_img_info">
+                                    식물의 번식을 도와주던 꿀벌이 사라지면 초식동물, 육식동물의 먹이사슬 구조가 무너져 생태계가 붕괴됩니다. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="page3_info">
+                        <p>2022년 12월 기준</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--page3 end-->
+
+    <!--page4-->
+    <div class="page4" id="page4">
+        <div class="page4_width">
+            <div class="page4-main" data-aos="fade-up" data-aos-duration="1000">
+                <h1>
+                    GREENDAY는 이런 일을 합니다.
+                </h1>
+            </div>
+
+            <div class="page4-con">
+                <div class="pg4-con pg4-con1" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="pg4-con-txt">
+                        <span>01</span>
+                        <h1>
+                            참여활동 
+                        </h1>
+                        <p>
+                            캠페인 참여를 통해 환경문제에 접근 할 수 있도록 장려하고 있습니다.
+                        </p>
+                    </div>
+
+                    <div class="pg4-img pg4-img1"></div>
+                </div>
+            </div>
+            
+            <div class="page4-con">
+                <div class="pg4-con pg4-con1" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="pg4-con-txt">
+                        <span>02</span>
+                        <h1>
+                            환경문제 홍보/전달
+                        </h1>
+                        <p>
+                            기후, 생태계 등 인간에게 피해를 줄 수 있는 많은 환경문제, 해결책에 대해 위해 조사하고 있습니다.
+                        </p>
+                    </div>
+
+                    <div class="pg4-img pg4-img2"></div>
+                </div>
+            </div>
+
+            <div class="page4-con">
+                <div class="pg4-con pg4-con1" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="pg4-con-txt">
+                        <span>03</span>
+                        <h1>
+                            친환경 제품 개발 
+                        </h1>
+                        <p>
+                            GREENDAY가 직접 환경에 피해가 적은, 친화적인 제품을 개발하고 있습니다.
+                        </p>
+                    </div>
+
+                    <div class="pg4-img pg4-img3"></div>
+                </div>
+            </div>
+
+            <div class="page4-con">
+                <div class="pg4-con pg4-con1" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="pg4-con-txt">
+                        <span>04</span>
+                        <h1>
+                            오염물질 정화
+                        </h1>
+                        <p>
+                            환경에 치명적 영향을 주는 오염물질을 후원금을 통해 정기적으로 정화하고 있습니다.
+                        </p>
+                    </div>
+
+                    <div class="pg4-img pg4-img4"></div>
+                </div>
+            </div>
+
+            <div class="page4-con">
+                <div class="pg4-con pg4-con1" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="pg4-con-txt">
+                        <span>05</span>
+                        <h1>
+                            동식물 보존 
+                        </h1>
+                        <p>
+                            생물다양성을 보존하기 위해 힘을 다하고 있습니다.
+                        </p>
+                    </div>
+
+                    <div class="pg4-img pg4-img5"></div>
+                </div>
+            </div>
+
+        </div>
+   </div>
+    <!--page4 end-->
+
+    <div id="footer">
+        <div class="footer_right">
+            <h1>뉴스레터 구독</h1>
+            <input type="text" placeholder="이름" onfocus="" class="footer_name">
+            <input type="email" placeholder="이메일" class="footer_email">
+            <div class="footer_checkbox"><input type="checkbox" class="email_agree"><div class="ft_cb_checkbox"></div><p>(필수) 개인정보 수집/이용 및 제3자 제공에 동의합니다.</p></div>
+            <input type="submit" value="구독하기" class="footer_submit">
+        </div>
+
+        <div class="footer_left">
+            <h1>
+                Come Green<br>With Us,<br>With Earth.
+            </h1>
+            <p>
+                [15785] 서울특별시 중구 을지로 256 4F
+            </p>
+            <p>
+                greenday_admin@greenday.com
+            </p>
+            <p>
+                02-1475-7153 
+            </p>
+            <div class="enquiry"><a href="#">문의하기</a></div>
+            <div class="footer_info"><a href="#">이용약관</a> | <a href="#">개인정보처리방침</a> | <a href="#">이메일수집거부</a> | <a href="#">국세청</a></div>
+        </div>
+        
+        <p>본 웹사이트는 상업적 목적이 아닌 개인 포트폴리오용 웹사이트입니다.</p>
+    </div>
+
+    <div class="up-btn up-btn390">
+        <img src="img/up-wh-big.png" alt="">
+    </div>
+</body>
+</html>
