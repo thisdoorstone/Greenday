@@ -1,0 +1,114 @@
+        /*mobile*/
+        @media all and (max-width:390px){
+            .row{display: none;}
+            #nav{max-width: 390px; height: 40px;}
+            .nav_width{max-width: 390px; padding: 0 20px;}
+            .donation, .search, .menu{margin-left: 36px; margin-top: 9.5px;}
+            .logo{font-size: 16px; height: 40px; line-height: 40px;}
+            .donation a{font-size: 12px; width: 80px; height: 21px; line-height: 21px;}
+            .search,.search-img,.menu,.toggle_box,.toggle_button{width: 21px; height: 21px;}
+            .toggle_box span{width: 21px;}
+            .toggle_box span::before{width: 21px; top: 8.5px;}
+            .toggle_box span::after{width: 21px; top: -7.5px;}
+            .up-btn{width: 40px; height: 40px; bottom: 36px; right: 20px;}
+            .up-btn img{width: 20px; height: 20px;}
+
+            .page2,.page3,.page4,#footer{max-width: 390px; padding: 60px 20px;}
+            
+            /*page1*/
+            .page1{max-width: 390px; height: 400px;}
+            .page1_width{max-width: 390px; padding: 0 20px;}
+            .page1_bg{width: 100%; height: 100%;}
+            .title h1{font-size: 24px; margin-bottom: 10px; animation: up_opacity 0.8s ease-in-out backwards;}
+            .title p{font-size: 14px; animation: up_opacity 0.8s ease-in-out 0.3s backwards;}
+            /*page1 end*/
+
+            /*page2*/
+            .page2_txt_box h1{font-size: 20px; font-weight: bold; margin: 0;}
+            .page2_txt_box p{font-size: 14px; margin: 10px 0 40px 0;}
+            .page2_txt_box p span{display: inline;}
+
+            .page2_img_box{width: 100vw; max-height: 256px; /*background: lightcyan;*/ display: block; position: relative;}
+            .page2_img_slide1{max-height: 120px; width: 200%; position: absolute; left: -10%; top: 0; display: inline-block; overflow: hidden; /*background: lavenderblush;*/ animation: left-slide 30s infinite linear;}
+            .page2_img_slide2{max-height: 120px; width: 200%; position: absolute; left: -110%; bottom: 0; display: inline-block; overflow: hidden; /*background: lavender;*/ animation: right-slide 30s infinite linear;}
+            .page2-2_con1,.page2-1_con1{height: 100%; overflow: hidden;}
+            .page2_img{max-width: 20%; height: 100%; background: #999; float: left; margin: 0 8px; overflow: hidden;}
+            /*page2 end*/
+
+            /*page3*/
+            .page3{max-width: 390px;}
+            .page3_txt_box>h1{font-size: 20px; margin-bottom: 40px;}
+            
+            .page3_content{float: left; overflow: hidden; width: 100%; height: 336px; margin-bottom: 16px;}
+            .page3_content2{/*margin-left: 36px;*/ margin-left: 0;}
+            .page3_content3{float: right; margin-bottom: 0;}
+            .page3_content>div{float: left; margin-bottom: 8px;}  /*이미지만 효과*/
+            .page3_content>div:last-child{margin-bottom: 0; margin-top: 8px;}
+
+            .page3_img_info{font-size: 14px; width: 100%; transition: 0.5s; margin-top: 40px; color: #fff; display: none; word-break: break-all;}
+
+            .page3_txt{word-break: keep-all; transition: 0.5s; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 80%; overflow: hidden;}
+            .page3_txt>h1{font-size: 30px; font-weight: bold; margin-bottom: 20px; color: #fff;}
+            .page3_txt>h1>span{font-size: 20px; font-weight: 300; color: #fff;}
+            .page3_txt>h4{font-size: 14px; color: #fff; margin: 0;}
+
+            .page3_con1{height: 160px;}
+            .page3_con2{height: 160px;}
+            .page3_con3{height: 160px;}
+            .page3_con4{height: 160px;}
+            .page3_con5{height: 160px;}
+            .page3_con6{height: 160px;}
+
+            .page3_info{font-size: 12px; margin-top: 20px;}
+            /*page3 end*/
+
+            /*page4*/
+            .page4{max-width: 390px;}
+            .page4 p{margin-bottom: 0;}
+            .page4_width{width: 100%; padding: 0;}
+
+            .page4-main{margin-bottom: 40px;}
+            .page4-main>h1{font-size: 20px;}
+
+            .page4-con{margin-bottom: 40px;}
+            .pg4-con{width: 100%; height: 200px; position: relative;}
+            .pg4-con-txt{width: calc(50% - 10px);}
+            .pg4-img{height: 200px;}
+            
+            .page4-con:nth-child(2n+1) .pg4-img{left: calc(50% + 10px);}
+            
+            .page4-con:nth-child(2n) .pg4-con-txt{right: 0; /*background: red;*/}
+            .page4-con:nth-child(2n) .pg4-img{right: calc(50% + 10px);}
+
+            .pg4-con-txt>span{font-size: 14px;}
+            .pg4-con-txt>h1{font-size: 20px; margin: 5px 0 10px;}
+            .pg4-con-txt>p{font-size: 12px; word-break: break-all;}
+            /*page4 end*/
+
+            /*footer*/
+            #footer{max-width: 390px; margin: 0 auto; padding: 60px 20px;}
+            .footer_left{width: 100%; overflow: hidden; position: static; transform: translate(0,0);}
+            .footer_left h1{margin-bottom: 20px; font-size: 20px; line-height: 30px;}
+            .footer_left p{margin-bottom: 10px; color: #999; font-size: 12px;}
+            .footer_left p:nth-child(4){margin-bottom: 20px;}
+            .footer_left .enquiry{margin-bottom: 20px;}
+            .footer_left .enquiry a{padding: 0 30px; height: 36px; line-height: 36px; font-size: 12px;}
+            .footer_left .enquiry a:hover{background: #666;}
+            .footer_left .footer_info{color: #eee; font-size: 12px;}
+            .footer_left .footer_info a{color: #ddd; font-size: 10px;}
+            .footer_left .footer_info a:hover{color: #999;}
+
+            .footer_right{width: 100%; overflow: hidden; position: static; transform: translate(0,0); margin-top: 60px;}
+            .footer_right h1{margin-bottom: 20px; font-size: 20px; font-weight: bold;}
+            .footer_email, .footer_name, .footer_submit{font-size: 12px; margin-bottom: 20px; height: 36px;}
+            .footer_email{margin-bottom: 20px;}
+            .footer_checkbox{height: 16px; margin-bottom: 40px;}
+            .footer_checkbox p{margin-left: 30px; font-size: 10px; line-height: 16px;}
+            .email_agree{height: 16px; width: 16px; position: absolute; left: 0; top: 0; opacity: 0; z-index: 1;}
+            .ft_cb_checkbox{width: 16px; height: 16px; position: absolute; top: 0; left: 0; border: 3px solid #333; transition: all 0.5s;}
+            .email_agree:checked~.ft_cb_checkbox{background: #333; transition: all 0.5s; border: 3px solid #333;}
+            .footer_right input:last-child{margin-bottom: 0;}
+            #footer>p{font-size: 10px; width: 100%; bottom: 20px;}
+            /*footer end*/
+        }
+        /*mobile end*/
